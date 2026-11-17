@@ -191,7 +191,7 @@ SELECT * FROM verify_chain();  -- flags seq 3
        3 | row content or hash was altered
 ```
 
-[screenshot here: web UI showing "Tamper" button click → "Verify" → red row flagged]
+*Screenshot pending: web UI showing "Tamper" button click → "Verify" → red row flagged*
 
 ---
 

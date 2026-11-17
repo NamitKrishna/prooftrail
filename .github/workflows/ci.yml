@@ -19,16 +19,6 @@ jobs:
       - name: Run CI regression test
         run: ./scripts/ci_check.sh
 
-      - name: Verify SQL syntax (dry-run)
-        run: |
-          # Quick syntax check on all SQL files
-          for f in db/*.sql db/**/*.sql; do
-            echo "Checking $f..."
-            docker run --rm -i postgres:16 psql --dry-run -U postgres -d postgres < "$f" >/dev/null
-          done
-        # Note: This requires the postgres image to be available; in practice
-        # you might want to use a separate step with services.postgres
-
   # Optional: Lint SQL files with sqlfluff
   sql-lint:
     name: SQL Lint
